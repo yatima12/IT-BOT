@@ -1,3 +1,2 @@
-<?
-printf("Hello IT BOT")
-?>
+<?php
+echo "Hello LINE IT-BOT";
