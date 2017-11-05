@@ -1,4 +1,4 @@
-const char* ssid = "Dlinkwifi";
+const char* ssid = "SPmention2_3_2";
 const char* password = "jiwzaza123";
  
 void setup () {
