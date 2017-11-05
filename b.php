@@ -79,5 +79,14 @@ curl_setopt($channel, CURLOPT_RETURNTRANSFER,true);
 curl_setopt($channel, CURLOPT_SSL_VERIFYPEER, false);
 $result = curl_exec($channel);
 curl_close ($channel);
-
+sleep(0);
+if (file_exists($filename)) {
+  $myfile = fopen(''.$_userId.'.txt', "w+") or die("Unable to open file!");
+  fwrite($myfile, $_msg);
+  fclose($myfile);
+} else {
+  $myfile = fopen(''.$_userId.'.txt', "x+") or die("Unable to open file!");
+  fwrite($myfile, $_msg);
+  fclose($myfile);
+}
 ?>
