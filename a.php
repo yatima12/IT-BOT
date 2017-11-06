@@ -27,8 +27,8 @@ if($arrJson['events'][0]['message']['text'] == "hello"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "on";
-}else if($arrJson['events'][0]['message']['text'] == "off"){
+  $arrPostData['messages'][0]['text'] = "on2";
+}else if($arrJson['events'][0]['message']['text'] == "off2"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
