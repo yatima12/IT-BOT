@@ -18,21 +18,36 @@ if (file_exists($filename)) {
   fwrite($myfile, $_msg);
   fclose($myfile);
 }
-if($arrJson['events'][0]['message']['text'] == "hello"){
+if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "hello your ID is ".$arrJson['events'][0]['source']['userId'];
-}else if($arrJson['events'][0]['message']['text'] == "on"){
+  $arrPostData['messages'][0]['text'] = "สวัสดี ID ของคุณคือ ".$arrJson['events'][0]['source']['userId'];
+}else if($arrJson['events'][0]['message']['text'] == "letf"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "on";
-}else if($arrJson['events'][0]['message']['text'] == "off"){
+  $arrPostData['messages'][0]['text'] = "Bot : เลี้ยวซ้าย";
+}else if($arrJson['events'][0]['message']['text'] == "right"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "off";
+  $arrPostData['messages'][0]['text'] = "Bot : เลี้ยวขวา";
+}else if($arrJson['events'][0]['message']['text'] == "back"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "Bot : ถอยหลัง";
+}else if($arrJson['events'][0]['message']['text'] == "foward"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "Bot : ตรงไปข้างหน้า";
+}else if($arrJson['events'][0]['message']['text'] == "stop"){
+  $arrPostData = array();
+  $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][0]['type'] = "text";
+  $arrPostData['messages'][0]['text'] = "Bot : หยุด";
 }else{
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
