@@ -64,9 +64,5 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 $result = curl_exec($ch);
 curl_close ($ch);
 
-sleep(5);
-  $myfile = fopen('text.txt', "w+") or die("Unable to open file!");
-  fwrite($myfile, $_msg1);
-  fclose($myfile);
 
 ?>
