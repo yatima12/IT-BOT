@@ -23,22 +23,22 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "สวัสดี ID ของคุณคือ ".$arrJson['events'][0]['source']['userId'];
-}else if($arrJson['events'][0]['message']['text'] == "left"){
+}else if($arrJson['events'][0]['message']['text'] == "turnleft"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "Bot : เลี้ยวซ้าย";
-}else if($arrJson['events'][0]['message']['text'] == "right"){
+}else if($arrJson['events'][0]['message']['text'] == "turnright"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "Bot : เลี้ยวขวา";
-}else if($arrJson['events'][0]['message']['text'] == "back"){
+}else if($arrJson['events'][0]['message']['text'] == "forback"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "Bot : ถอยหลัง";
-}else if($arrJson['events'][0]['message']['text'] == "go"){
+}else if($arrJson['events'][0]['message']['text'] == "forward"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
